@@ -125,7 +125,7 @@ ENV ENERGYPLUS_EXE_PATH=/usr/local/openstudio-${OPENSTUDIO_VERSION}${OPENSTUDIO_
 
 # The OpenStudio Gemfile contains a fixed bundler version, so you have to install and run specific to that version
 RUN gem install bundler -v $OS_BUNDLER_VERSION && \
-    mkdir /var/oscli && \
+  #AA commenting out since already done  mkdir /var/oscli && \
     ls /usr/local && \
     cp /usr/local/openstudio-${OPENSTUDIO_VERSION}${OPENSTUDIO_VERSION_EXT}/Ruby/Gemfile /var/oscli/ && \
     cp /usr/local/openstudio-${OPENSTUDIO_VERSION}${OPENSTUDIO_VERSION_EXT}/Ruby/Gemfile.lock /var/oscli/ && \
