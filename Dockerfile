@@ -8,8 +8,7 @@ ENV SRC_DIR /usr/local/src
 ENV LDFLAGS /usr/local/JModelica/ThirdParty/Sundials/lib
 ENV LIBRARY_PATH /usr/local/JModelica/ThirdParty/Sundials/lib
 ENV LD_LIBRARY_PATH /usr/local/JModelica/ThirdParty/Sundials/lib
-ENV MODELICAPATH /usr/local/JModelica/ThirdParty/MSL:/opt/openstudio/server/modelica-buildings:opt/openstudio/server/modelica-buildings/Buildings:/opt/openstudio/server/geojson-modelica-translator/tests/management/data/sdk_project_scraps:
-/opt/openstudio/server/geojson-modelica-translator/tests/management/data/sdk_project_scraps/model_from_sdk
+ENV MODELICAPATH /usr/local/JModelica/ThirdParty/MSL:/opt/openstudio/server/modelica-buildings:opt/openstudio/server/modelica-buildings/Buildings:/opt/openstudio/server/geojson-modelica-translator/tests/management/data/sdk_project_scraps:/opt/openstudio/server/geojson-modelica-translator/tests/management/data/sdk_project_scraps/model_from_sdk
 ENV JMODELICA_HOME = /usr/local/JModelica
 ENV JAVA_HOME = /usr/lib/jvm/java-8-openjdk-amd64
 
@@ -122,11 +121,11 @@ RUN apt-get update && apt-get install -y \
     && dpkg-reconfigure locales
 
 
-RUN curl -SLO https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.2.tar.gz \   
-    && tar -xvzf ruby-2.7.2.tar.gz \
-    && cd ruby-2.7.2 \
-    && ./configure \
-    && make && make install 
+#RUN curl -SLO https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.2.tar.gz \   
+ #   && tar -xvzf ruby-2.7.2.tar.gz \
+  #  && cd ruby-2.7.2 \
+   # && ./configure \
+   # && make && make install 
 
 
 ## Add RUBYLIB link for openstudio.rb
